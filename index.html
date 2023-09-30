@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Пошук поста за ID</title>
+  </head>
+  <body>
+    <h1>Пошук поста за ID</h1>
+    <label for="postIdInput">Введіть ID поста (1-100):</label>
+    <input
+      type="number"
+      id="postIdInput"
+      min="1"
+      max="100"
+      required
+      pattern="[1-9][0-9]?|100"
+      title="Введіть цифру від 1 до 100"
+    />
+
+    <button id="searchButton">Знайти пост</button>
+
+    <div id="postContainer" style="display: none">
+      <h2>Знайдений пост:</h2>
+      <div id="postContent"></div>
+      <button id="getCommentsButton">Отримати коментарі</button>
+    </div>
+
+    <div id="commentsContainer" style="display: none">
+      <h2>Коментарі:</h2>
+      <ul id="commentsList"></ul>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

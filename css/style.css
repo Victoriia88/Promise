@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+}
+
+label {
+  font-weight: bold;
+}
+
+#postIdInput {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #0f2f51;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#postContainer,
+#commentsContainer {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+#postContent {
+  margin-bottom: 10px;
+}
+
+#commentsList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#getCommentsButton {
+  background-color: #174221;
+}
+
+#commentsContainer {
+  display: none;
+}
