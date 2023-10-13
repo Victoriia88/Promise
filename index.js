@@ -1,10 +1,10 @@
 const postIdInput = document.getElementById("postIdInput");
-const searchButton = document.getElementById("searchButton");
 const postContainer = document.getElementById("postContainer");
 const postContent = document.getElementById("postContent");
 const getCommentsButton = document.getElementById("getCommentsButton");
 const commentsContainer = document.getElementById("commentsContainer");
 const commentsList = document.getElementById("commentsList");
+const postSearchForm = document.getElementById("postSearchForm");
 
 function fetchPostById(postId) {
   return fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`).then(
@@ -46,9 +46,14 @@ function displayComments(comments) {
   commentsContainer.style.display = "block";
 }
 
-searchButton.addEventListener("click", () => {
+postSearchForm.addEventListener("submit", (event) => {
+  event.preventDefault(); // Зупиняє стандартну дію форми (відправку)
+
   const postId = postIdInput.value;
-  if (!postId) return;
+  if (!postId || postId < 1 || postId > 100) {
+    alert("Введіть коректне значення ID поста (1-100).");
+    return;
+  }
 
   commentsList.innerHTML = "";
 

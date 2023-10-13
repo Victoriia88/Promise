@@ -8,18 +8,22 @@
   </head>
   <body>
     <h1>Пошук поста за ID</h1>
-    <label for="postIdInput">Введіть ID поста (1-100):</label>
-    <input
-      type="number"
-      id="postIdInput"
-      min="1"
-      max="100"
-      required
-      pattern="[1-9][0-9]?|100"
-      title="Введіть цифру від 1 до 100"
-    />
-
-    <button id="searchButton">Знайти пост</button>
+    <form id="postSearchForm">
+      <label for="postIdInput"
+        >Введіть ID поста (вкажіть значення від 1-100):</label
+      >
+      <input
+        type="number"
+        id="postIdInput"
+        name="postId"
+        min="1"
+        max="100"
+        required
+        pattern="[1-9][0-9]?|100"
+        title="Введіть цифру від 1 до 100"
+      />
+      <button type="submit" id="searchButton">Знайти пост</button>
+    </form>
 
     <div id="postContainer" style="display: none">
       <h2>Знайдений пост:</h2>
