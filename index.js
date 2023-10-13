@@ -47,7 +47,7 @@ function displayComments(comments) {
 }
 
 postSearchForm.addEventListener("submit", (event) => {
-  event.preventDefault(); // Зупиняє стандартну дію форми (відправку)
+  event.preventDefault();
 
   const postId = postIdInput.value;
   if (!postId || postId < 1 || postId > 100) {
